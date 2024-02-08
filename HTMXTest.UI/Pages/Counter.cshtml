@@ -23,7 +23,10 @@
     <div class="d-flex justify-content-between">
         <div>
             <!-- change the button -->
-            <button class="btn btn-primary">
+            <button class="btn btn-primary"
+                    hx-post="@Url.Page("Counter")"
+                    hx-target="#example_one_count"
+                    hx-swap="innerHTML">
                 <i class="fa fa-plus-circle"></i>
                 Increment
             </button>

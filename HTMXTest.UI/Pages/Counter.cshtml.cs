@@ -5,7 +5,9 @@ namespace HTMXTest.UI.Pages;
 
 public class Counter : PageModel
 {
-    private int count;
+    // NOTE: This state is shared across all clients
+    //       you can see by opening in multiple tabs
+    private static int count;
 
     public void OnGet()
     {
@@ -14,8 +16,7 @@ public class Counter : PageModel
 
     public IActionResult OnPost()
     {
-        // TODO: Increment the count on each request
-        //       hint {count++}
-        return Content("<span></span>", "text/html");
+
+        return Content($"<span>{++count}</span>", "text/html");
     }
 }
