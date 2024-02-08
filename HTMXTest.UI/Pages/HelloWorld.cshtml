@@ -26,7 +26,10 @@
 
     <!-- add htmx attributes to button -->
     <!-- will get this page -->
-    <button class="btn btn-primary btn-lg px-4">
+    <button class="btn btn-primary btn-lg px-4"
+            hx-get="@Url.Page("HelloWorld")"
+            hx-target="#target"
+            hx-swap="innerHtml">
         Click Me
     </button>
 </div>

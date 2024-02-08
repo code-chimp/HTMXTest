@@ -10,7 +10,7 @@ public class HelloWorld : PageModel
     {
         return Request.IsHtmx()
             // TODO: <span>Hello, World!</span>
-            ? Content("<span></span>", "text/html")
+            ? Content("<span>Hello, World!</span>", "text/html")
             : Page();
     }
 }
