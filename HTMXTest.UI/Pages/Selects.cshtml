@@ -24,15 +24,20 @@
 <div class="card p-4">
     <div class="form-group">
         <label>Select a Cuisine</label>
-        <select @* asp-for="Cuisine"*@
-            asp-items="Model.CuisineItems"
-            class="form-control">
+        <select asp-for="Cuisine"
+                asp-items="Model.CuisineItems"
+                class="form-control"
+                hx-get="@Url.Page("Selects", "Foods")"
+                hx-target="#foods">
         </select>
     </div>
     <div class="form-group mt-2">
         <label>Select a Food</label>
-        <select @* asp-for="Food" *@
-            class="form-control" id="foods">
+        <select asp-for="Food"
+                id="foods"
+                class="form-control"
+                hx-get="@Url.Page("Selects", "Love")"
+                hx-target="#love">
             <option disabled selected value="">Pick a Cuisine First</option>
         </select>
     </div>

@@ -33,9 +33,11 @@ public class Selects : PageModel
         }
     }
 
-    // Step #1
-    // TODO: Add string? parameters Cuisine and Food
-    // hint: don't forget BindProperty
+    [BindProperty(SupportsGet = true)]
+    public string? Cuisine { get; set; }
+
+    [BindProperty(SupportsGet = true)]
+    public string? Food { get; set; }
 
     public void OnGet()
     {
@@ -45,13 +47,8 @@ public class Selects : PageModel
     {
         var html = new StringBuilder();
 
-        // Step #2
-        // Todo: Generate Options for Select Element
-        // hint: use the selected cuisine to get the 
-
         #region Selection logic
 
-        /*
         if (Cuisine is { Length: > 0 } cuisine && cuisines.TryGetValue(cuisine, out var foods))
         {
             html.AppendLine("<option disabled selected>Select a food</option>");
@@ -60,7 +57,6 @@ public class Selects : PageModel
                 html.AppendLine($"<option>{food}</option>");
             }
         }
-         */
 
         #endregion
 
@@ -69,10 +65,6 @@ public class Selects : PageModel
 
     public IActionResult OnGetLove()
     {
-        // Step 3
-        // Todo: Return Span proclaiming your love for Food
-        // hint: <span><i class=\"fa fa-heart\"></i> I love {Food}!</span>
-
-        return Content("");
+        return Content($"<span><i class=\"fa fa-heart\"></i> I love {Food}!</span>");
     }
 }

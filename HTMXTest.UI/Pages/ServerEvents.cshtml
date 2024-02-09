@@ -13,7 +13,7 @@
 
     Server Sent Events (SSE) is a technology that allows a server to communicate directly with a connected client. SSE can be more efficient in certain circumstances, as the client will only request to retrieve information when the server notifies the client of a change. However, one drawback to SSE is that clients need to remain connected, taking up resources like memory and CPU.
 
-    With HTMX and ASP.NET Core, it is pretty straightforward to use SSE events. This project uses the NuGet package `Lib.AspNetCore.ServerSentEvents` to propagate changes to all connected clients. To see the service in action, look at the file `Models/ServerEventsWorker` and the Razor page `11_ServerEvents`.
+    With HTMX and ASP.NET Core, it is pretty straightforward to use SSE events. This project uses the NuGet package `Lib.AspNetCore.ServerSentEvents` to propagate changes to all connected clients. To see the service in action, look at the file `Models/ServerEventsWorker` and the Razor page `ServerEvents`.
 
     As you may have noticed, the number below continues to change.
 

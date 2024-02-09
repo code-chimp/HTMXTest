@@ -16,7 +16,6 @@ public class Counter : PageModel
 
     public IActionResult OnPost()
     {
-
         return Content($"<span>{++count}</span>", "text/html");
     }
 }
